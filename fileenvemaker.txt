@@ -1,0 +1,9 @@
+in bash 
+Create a .env file
+echo "MY_VARIABLE=HelloWorld" > .env
+
+2. Load the .env file
+export $(grep -v '^#' .env | xargs)
+
+3. Check if it's working
+echo $MY_VARIABLE
