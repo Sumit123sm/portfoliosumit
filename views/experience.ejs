@@ -1,0 +1,29 @@
+<section id="experience" class="container py-5">
+    <h2 class="text-center mb-4">Work Experience</h2>
+    <div class="row">
+        <% experiences.forEach(exp => { %>
+            <div class="col-md-6">
+                <div class="card shadow-lg mb-3">
+                    <!-- Display image if available -->
+                     
+                    <% if (exp.image_url) { %>
+                        <img src="<%= exp.image_url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/') %>" 
+                        class="card-img-top project-img" 
+                        alt="Work experience image">
+                    <% } %>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title"><%= exp.role %></h5>
+                        <h6 class="text-muted"><%= exp.company %> | <%= exp.duration %></h6>
+                        <p class="card-text"><%= exp.description %></p>
+
+                        <!-- Display project link if available -->
+                        <% if (exp.project_link) { %>
+                            <a href="<%= exp.project_link %>" class="btn btn-primary" target="_blank">View Project</a>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</section>
