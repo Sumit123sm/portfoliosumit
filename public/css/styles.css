@@ -12,6 +12,7 @@ body {
     background: #0a192f;
 }
 .navbar-brand {
+    margin-left: 15px;
     font-weight: bold;
     font-size: 1.5rem;
     color: #00bcd4 !important;
