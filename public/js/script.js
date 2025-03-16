@@ -118,9 +118,10 @@ function closeVideoBox() {
     // Hide the video box
     videoBox.style.display = "none";
 
-    // Stop the video by resetting the src
-    iframe.src = iframe.src;
+    // Stop the video by removing the src
+    iframe.src = "";
 }
+
 
 // 📌 Function to Toggle Mobile Menu
 function toggleMobileMenu() {
